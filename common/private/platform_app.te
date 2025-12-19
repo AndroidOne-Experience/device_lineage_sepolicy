@@ -12,3 +12,6 @@ allow platform_app mnt_pass_through_file:dir { create_dir_perms mounton };
 
 # Allow Columbus to set ApSensor property
 allow platform_app system_prop:property_service set;
+
+# Allow systemui access to bluetooth_lea_prop
+get_prop(platform_app, bluetooth_lea_prop)
